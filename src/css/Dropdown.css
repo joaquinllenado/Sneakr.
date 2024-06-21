@@ -1,0 +1,39 @@
+.dropdown {
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    #dropdown-list {
+        width:100%;
+        justify-content: space-between;
+        overflow-x: scroll;
+    }
+
+    #dropdown-item {
+        width: 150px;
+        font-size: small;
+    }
+}
+
+#dropdown-list {
+    display: flex;
+    list-style: none;
+    width: 1500px;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 150px;
+}
+
+#dropdown-item {
+    font-weight: 500;
+    text-wrap: nowrap;
+    font-size: large;
+}
+
+#dropdown-item a:hover {
+    color:cornflowerblue;
+}

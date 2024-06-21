@@ -1,0 +1,72 @@
+.navbar {
+    display:flex;
+    align-items: center;
+    width: 99%;
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    justify-content:space-evenly;
+    width: 300px;
+    padding: 0;
+}
+
+li {
+    width: 10px;
+    font-size: large;
+    font-weight: 475;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#branding {
+    padding: 0 2rem;
+    width: 145px;
+}
+
+#search-bar {
+    height: 40px;
+    width: 70vw;
+    min-width: 20vw;
+    border: 1px solid lightgray;
+    padding-left: 10px;
+    font-size: large;
+    font-weight: light;
+    background-color: rgb(251, 255, 255);
+    
+}
+
+#right-section {
+    padding: 0 2rem;
+    width: 450px;
+}
+
+.button {
+    height: 32px;
+    width: 75px;
+    font-size:medium;
+    margin: 0 4px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.login {
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+.login:hover {
+    background-color: black;
+    color: white;
+}
+
+.signup {
+    background-color: black;
+    color: white;
+    width: 90px;
+}

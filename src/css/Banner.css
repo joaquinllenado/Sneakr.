@@ -1,0 +1,23 @@
+.banner-link {
+    align-self: center;
+}
+.banner {
+    text-align: left;
+    width: 1250px;
+    height: 190px;
+    background-color: green;
+    margin: 20px 0;
+    padding-left: 250px;
+    background-image: url("../images/puma_brandbanner_1600x400\ \(1\).png");
+    background-size:cover;
+    background-position: 0;
+}
+
+.banner h1 {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.banner img {
+    scale: 30%;
+}
