@@ -1,17 +1,20 @@
+import { useState, useEffect } from "react";
 import './App.css';
-import NavBar from './routes/NavBar';
-import Banner from './routes/Banner';
-import Main from './routes/Main';
-import Footer from './routes/Footer';
-import Dropdown from './routes/Dropdown';
+import NavBar from './components/NavBar';
+import Banner from './components/Banner';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import Dropdown from './components/Dropdown';
 
 function App() {
+
+
   return (
     <div className="App">
       <NavBar/>
       <Dropdown/>
       <Banner/>
-      <Main/>
+      <Main />
       <Footer/>
     </div>
   );
