@@ -1,5 +1,55 @@
 .shoeCard {
-    background-color: gray;
     height:250px;
-    width:200px;
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 7px;
+    justify-content: space-evenly;
+}
+
+.shoeCard img {
+    width: 75%;
+    object-fit: cover;
+    padding: 0;
+}
+
+#shoeName {
+    width: 100%;
+    font-size: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.shoeCard p {
+    font-size: small;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.resellSites {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resellSites li{
+    text-decoration: none;
+    font-size: small;
+    width: 100%;
+    margin-top: 4px;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+.resellSites span {
+    color: rgb(1, 206, 1);
 }
