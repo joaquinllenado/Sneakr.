@@ -3,7 +3,15 @@ function NavBar(){
     return(
         <div className='navbar'>
             <div id="branding">
-                <h1>Sneakr.</h1>
+                <h1>
+                    <span className="letter">S</span>
+                    <span className="letter">n</span>
+                    <span className="letter">e</span>
+                    <span className="letter">a</span>
+                    <span className="letter">k</span>
+                    <span className="letter">r</span>
+                    <span className="letter">.</span>
+                </h1>
             </div>
             <input id="search-bar" type="text" placeholder="Search for brand, color, etc."></input>
                 <nav>

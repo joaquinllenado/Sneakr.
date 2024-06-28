@@ -27,6 +27,11 @@ a{
 #branding {
     padding: 0 2rem;
     width: 145px;
+    cursor:default;
+}
+
+.letter:hover {
+    color:cornflowerblue;
 }
 
 #search-bar {
@@ -38,7 +43,6 @@ a{
     font-size: large;
     font-weight: light;
     background-color: rgb(251, 255, 255);
-    
 }
 
 #right-section {
