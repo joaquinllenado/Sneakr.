@@ -8,6 +8,7 @@ function Main(){
     const [nike, setNike] = useState([]);
     const [newBalance, setNewBalance] = useState([]);
     const [adidas, setAdidas] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const popularRequest = fetch("http://localhost:8000/mostpopular")
     const jordanRequest = fetch("http://localhost:8000/jordan");
@@ -24,7 +25,13 @@ function Main(){
             adidasRequest
         ])
          .then(([resPopular, resJordan, resNike, resNewBalance, resAdidas]) =>
-            Promise.all([resPopular.json(), resJordan.json(), resNike.json(), resNewBalance.json(), resAdidas.json()])
+            Promise.all([
+                resPopular.json(), 
+                resJordan.json(), 
+                resNike.json(), 
+                resNewBalance.json(), 
+                resAdidas.json()
+            ])
         )
          .then(([dataPopular, dataJordan, dataNike, dataNewBalance, dataAdidas]) => {
             setPopular(dataPopular);
@@ -33,11 +40,18 @@ function Main(){
             setNewBalance(dataNewBalance);
             setAdidas(dataAdidas);
          })
+         .finally(() => {
+            setLoading(false);
+         });
     }
 
     useEffect(() => {
         fetchData();
     }, [])
+
+    if (loading) {
+        return <div className="loading">Loading...</div>
+    }
 
     return(
         <div className="main">

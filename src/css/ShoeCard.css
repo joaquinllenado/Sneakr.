@@ -25,6 +25,10 @@
     text-overflow: ellipsis;
 }
 
+#shoeName:hover {
+    color:cornflowerblue;
+}
+
 .shoeCard p {
     font-size: small;
     margin: 0;
@@ -52,4 +56,8 @@
 
 .resellSites span {
     color: rgb(1, 206, 1);
+}
+
+.resellSites li:hover {
+    color:cornflowerblue;
 }
