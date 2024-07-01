@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/Main.css"
 import Row from "./Row";
+import Modal from "./Modal";
 
 function Main(){
     const [popular, setPopular] = useState([]);
@@ -9,6 +10,7 @@ function Main(){
     const [newBalance, setNewBalance] = useState([]);
     const [adidas, setAdidas] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [selectedShoe, setSelectedShoe] = useState(null);
 
     const popularRequest = fetch("http://localhost:8000/mostpopular")
     const jordanRequest = fetch("http://localhost:8000/jordan");
@@ -49,6 +51,14 @@ function Main(){
         fetchData();
     }, [])
 
+    const handleShoeClick = (shoe) => {
+        setSelectedShoe(shoe);
+    };
+
+    const handleCloseModal = () => {
+        setSelectedShoe(null);
+    }
+
     if (loading) {
         return <div className="loading">Loading...</div>
     }
@@ -57,24 +67,27 @@ function Main(){
         <div className="main">
             <div className="rowDivider">
                 <h3>Most Popular</h3>
-                <Row shoes={popular}/>
+                <Row shoes={popular} onShoeClick={handleShoeClick}/>
             </div>
             <div className="rowDivider">
                 <h3>Jordan</h3>
-                <Row shoes={jordan}/>
+                <Row shoes={jordan} onShoeClick={handleShoeClick}/>
             </div>
             <div className="rowDivider">
                 <h3>Nike</h3>
-                <Row shoes={nike}/>
+                <Row shoes={nike} onShoeClick={handleShoeClick}/>
             </div>
             <div className="rowDivider">
                 <h3>New Balance</h3>
-                <Row shoes={newBalance}/>
+                <Row shoes={newBalance} onShoeClick={handleShoeClick}/>
             </div>
             <div className="rowDivider">
                 <h3>Adidas</h3>
-                <Row shoes={adidas}/>
+                <Row shoes={adidas} onShoeClick={handleShoeClick}/>
             </div>
+            {selectedShoe && (
+                <Modal shoe={selectedShoe} onClose={handleCloseModal} />
+            )}
         </div>
     )
 }
