@@ -1,19 +1,24 @@
+import React, { useState } from "react";
 import "../css/ShoeCard.css";
+import Modal from "./Modal";
 
-function ShoeCard({shoe}) {
-    const {shoeName, thumbnail, lowestResellPrice} = shoe;
+function ShoeCard({shoe, toggleModal}) {
+    const {shoeName, thumbnail, lowestResellPrice, resellLinks} = shoe;
+
     return (
-        <div className="shoeCard">
-            <img src={thumbnail} />
+        <div className="shoeCard" onClick={toggleModal}>
+            <img src={thumbnail} alt={shoeName}/>
             <p id="shoeName">{shoeName}</p>
             <p>Lowest Resell Prices:</p>
             <ul className="resellSites">
-                <li>StockX: <span>${lowestResellPrice.stockX}</span></li>
+                {lowestResellPrice.stockX &&
+                    <li><a href={resellLinks.stockX}>StockX: <span>${lowestResellPrice.stockX}</span></a></li>
+                }
                 {lowestResellPrice.goat &&
-                    <li>Goat: <span>${lowestResellPrice.goat}</span></li>
+                    <li><a href={resellLinks.goat}>Goat: <span>${lowestResellPrice.goat}</span></a></li>
                 }
                 {lowestResellPrice.flightClub &&
-                    <li>Flight Club: <span>${lowestResellPrice.flightClub}</span></li>
+                    <li><a href={resellLinks.flightClub}>Flight Club: <span>${lowestResellPrice.flightClub}</span></a></li>
                 }
             </ul>
         </div>

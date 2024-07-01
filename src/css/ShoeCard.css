@@ -58,6 +58,6 @@
     color: rgb(1, 206, 1);
 }
 
-.resellSites li:hover {
+.resellSites a:hover {
     color:cornflowerblue;
 }
