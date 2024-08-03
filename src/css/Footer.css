@@ -1,0 +1,20 @@
+.footer{
+    border-top: 1px solid lightgray;
+    text-align: center;
+    font-size: medium;
+    margin-top: 50px;
+}
+
+.logos {
+    list-style: none;
+}
+
+.logos li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.logos img{
+    height: 50px;
+    width: 50px;
+}
