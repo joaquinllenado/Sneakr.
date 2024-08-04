@@ -8,7 +8,7 @@ function Modal({shoe, onClose}){
         <div className="modal" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 
-                <img src={thumbnail} />
+                <img src={thumbnail} alt="Shoe"/>
                 <div id="shoeInfo">
                     <button className="modal-close" onClick={onClose}>x</button>
                     <h2 id="shoeName">{shoeName}</h2>

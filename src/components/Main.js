@@ -49,7 +49,7 @@ function Main(){
 
     useEffect(() => {
         fetchData();
-    }, [])
+    });
 
     const handleShoeClick = (shoe) => {
         setSelectedShoe(shoe);

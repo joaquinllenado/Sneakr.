@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import "../css/ShoeCard.css";
-import Modal from "./Modal";
+
 
 function ShoeCard({shoe, toggleModal}) {
     const {shoeName, thumbnail, lowestResellPrice, resellLinks} = shoe;

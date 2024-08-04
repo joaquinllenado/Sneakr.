@@ -5,13 +5,3 @@
     flex-direction: column;
     gap: 10px;
 }
-
-.rowDivider {
-    overflow-x: hidden;
-}
-
-@media only screen and (max-width: 1200px) {
-    .rowDivider {
-        overflow-x: scroll;
-    }
-}

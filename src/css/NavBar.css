@@ -1,7 +1,7 @@
 .navbar {
     display:flex;
     align-items: center;
-    width: 99%;
+    width: 100%;
     border-bottom: 1px solid lightgray;
 }
 

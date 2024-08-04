@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import './App.css';
 import NavBar from './components/NavBar';
 import Banner from './components/Banner';
@@ -7,8 +6,6 @@ import Footer from './components/Footer';
 import Dropdown from './components/Dropdown';
 
 function App() {
-
-
   return (
     <div className="App">
       <NavBar/>
