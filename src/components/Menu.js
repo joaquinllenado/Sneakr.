@@ -1,4 +1,3 @@
-import hamburger from "../images/Hamburger-Menu.svg"
 import "../css/Menu.css"
 
 function Menu({isOpen}){
