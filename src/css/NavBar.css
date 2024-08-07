@@ -19,15 +19,10 @@
     padding: 0;
 }
 
-li {
+.navbar-links li {
     width: 10px;
     font-size: large;
     font-weight: 475;
-}
-
-a{
-    text-decoration: none;
-    color: black;
 }
 
 #branding {
