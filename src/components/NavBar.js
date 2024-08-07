@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import '../css/NavBar.css';
-import Menu
- from './Menu';
+import Menu from './Menu';
+import searchButton from "../images/Search.png"
+
 function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen)
+    }
+
+    const toggleSearch = () => {
+        setSearchOpen(!searchOpen)
     }
 
     return(
@@ -28,17 +34,43 @@ function NavBar(){
                 </a>
             </div>
             <input id="search-bar" type="text" placeholder="Search for brand, color, etc."></input>
-            <nav>
-                <ul className="navbar-links">
-                    <li><a href="/news/">News</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/help/">Help</a></li>
-                    <li><a href="/sell/">Sell</a></li>
-                </ul>
-            </nav>
-            <button className="login button">Login</button>
-            <button className="signup button">Sign Up</button>  
+            <div id="links-and-buttons">
+                <nav>
+                    <ul className="navbar-links">
+                        <li><a href="/news/">News</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/help/">Help</a></li>
+                        <li><a href="/sell/">Sell</a></li>
+                    </ul>
+                </nav>
+                <div id="buttons">
+                    <button className="login button">Login</button>
+                    <button className="signup button">Sign Up</button>  
+                </div>
+            </div>
+
+            <div className="search-bar-small" onClick={toggleSearch}>
+                <img src={searchButton} alt="search"/>
+            </div>
+
+            <style jsx>{`
+                @media (max-width: 767px){
+                    #links-and-buttons{
+                        display: ${menuOpen ? "flex" : "none"};
+                    }
+                    
+                    #search-bar{
+                        display: ${searchOpen ? "flex" : "none"};
+                    }
+
+                    .menu{
+                        display: ${searchOpen ? "none" : "flex"};
+                    }
+                }
+            `}</style>
         </div>
+
+        
     )
 }
 

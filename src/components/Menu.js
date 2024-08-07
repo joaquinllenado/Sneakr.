@@ -1,5 +1,3 @@
-import "../css/Menu.css"
-
 function Menu({isOpen}){
     return(
         <>
@@ -10,6 +8,26 @@ function Menu({isOpen}){
             </div>
 
             <style jsx>{`
+                .hamburger{
+                    padding-left: 5px;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-flow: column nowrap;
+                    z-index: 10;
+                    cursor: pointer;
+                }
+
+                .burger{
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 50px;
+                    background-color: black;
+                    transform-origin: 1px;
+                    transition: all 0.3s linear;
+                }
+
                 .burger1{
                     transform: ${isOpen ? 'rotate(45deg)' : 'rotate(0)'};
                 }

@@ -5,6 +5,12 @@
     border-bottom: 1px solid lightgray;
 }
 
+#links-and-buttons{
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
 .navbar-links {
     display: flex;
     list-style: none;
@@ -48,6 +54,10 @@ a{
     background-color: rgb(251, 255, 255);
 }
 
+.buttons {
+    display: flex;
+}
+
 .button {
     height: 32px;
     width: 75px;
@@ -58,7 +68,7 @@ a{
 }
 
 .login {
-    background-color: transparent;
+    background-color: white;
     margin-left: 20px;
 }
 
@@ -78,6 +88,10 @@ a{
     display: none;
 }
 
+.search-bar-small{
+    display: none;
+}
+
 @media (max-width: 767px){
     .menu{
         display: flex;
@@ -87,16 +101,38 @@ a{
         display: none;
     }
 
-    .navbar-links{
-        display: none;
+    #links-and-buttons{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 1;
+        margin-top: 1270px;
+        width: 100%;
+        height: 90vh;
+        background-color: white;
     }
 
-    .navbar button{
-        display: none;
+    .navbar-links{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links li{
+        border: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 5px 0;
     }
     
     #branding{
         text-align: center;
         margin: auto;
+    }
+
+    .search-bar-small{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
     }
 }
