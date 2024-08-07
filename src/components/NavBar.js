@@ -33,7 +33,7 @@ function NavBar(){
                     </h1>
                 </a>
             </div>
-            <input id="search-bar" type="text" placeholder="Search for brand, color, etc."></input>
+            <input id="search-bar" type="text" placeholder="Search for brand, color, etc."/>
             <div id="links-and-buttons">
                 <nav>
                     <ul className="navbar-links">
