@@ -1,32 +1,30 @@
 .banner-link {
     align-self: center;
+    width: 90%;
 }
 .banner {
     text-align: left;
-    width: 1250px;
+    width: 100%;
     height: 190px;
     background-color: green;
     margin: 20px 0;
-    padding-left: 250px;
     background-image: url("../images/puma_brandbanner_1600x400\ \(1\).png");
     background-size:cover;
-    background-position: 0;
+    background-position: center;
 }
 
-@media only screen and (max-width:1300px){
+@media (max-width:700px){
+    .banner-link {
+        width: 95%;
+        overflow: hidden;
+    }
     .banner {
-        width: 90vw;
+        padding-left: 50px;
     }
 }
 
-@media only screen and (max-width:900px){
-    .banner {
-        width: 80vw;
-    }
-}
-
-@media only screen and (max-width:700px){
-    .banner {
-        width: 70vw;
+@media (max-width:600px){
+    .banner{
+        padding-left: 180px;
     }
 }
