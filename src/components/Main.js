@@ -1,70 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "../css/Main.css"
+import React, { useState} from "react";
 import Row from "./Row";
 import Modal from "./Modal";
+import "../css/Main.css";
 
-function Main(){
-    const [popular, setPopular] = useState([]);
-    const [jordan, setJordan] = useState([]);
-    const [nike, setNike] = useState([]);
-    const [newBalance, setNewBalance] = useState([]);
-    const [adidas, setAdidas] = useState([]);
-    const [puma, setPuma] = useState([]);
-    const [crocs, setCrocs] = useState([]);
-    const [converse, setConverse] = useState([]);
-    const [loading, setLoading] = useState(true);
+function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse, loading}){
     const [selectedShoe, setSelectedShoe] = useState(null);
-
-    const popularRequest = fetch("http://localhost:8000/mostpopular");
-    const jordanRequest = fetch("http://localhost:8000/jordan");
-    const nikeRequest = fetch("http://localhost:8000/nike");
-    const newBalanceRequest = fetch("http://localhost:8000/newbalance");
-    const adidasRequest = fetch("http://localhost:8000/adidas");
-    const pumaRequest = fetch("http://localhost:8000/puma");
-    const crocsRequest = fetch("http://localhost:8000/crocs");
-    const converseRequest = fetch("http://localhost:8000/converse");
-
-    async function fetchData(){
-        Promise.all([
-            popularRequest,
-            jordanRequest,
-            nikeRequest,
-            newBalanceRequest,
-            adidasRequest,
-            pumaRequest,
-            crocsRequest,
-            converseRequest
-        ])
-         .then(([resPopular, resJordan, resNike, resNewBalance, resAdidas, resPuma, resCrocs, resConverse]) =>
-            Promise.all([
-                resPopular.json(), 
-                resJordan.json(), 
-                resNike.json(), 
-                resNewBalance.json(), 
-                resAdidas.json(),
-                resPuma.json(),
-                resCrocs.json(),
-                resConverse.json()
-            ])
-        )
-         .then(([dataPopular, dataJordan, dataNike, dataNewBalance, dataAdidas, dataPuma, dataCrocs, dataConverse]) => {
-            setPopular(dataPopular);
-            setJordan(dataJordan);
-            setNike(dataNike);
-            setNewBalance(dataNewBalance);
-            setAdidas(dataAdidas);
-            setPuma(dataPuma);
-            setCrocs(dataCrocs);
-            setConverse(dataConverse);
-         })
-         .finally(() => {
-            setLoading(false);
-         });
-    }
-
-    useEffect(() => {
-        fetchData();
-    });
 
     const handleShoeClick = (shoe) => {
         setSelectedShoe(shoe);
@@ -75,7 +15,25 @@ function Main(){
     }
 
     if (loading) {
-        return <div className="loading">Loading...</div>
+        return(
+            <div className="main">
+                <h3>Most Popular</h3>
+                <div className="loading">Loading...</div>
+                <h3>Jordan</h3>
+                <div className="loading">Loading...</div>
+                <h3>Nike</h3>
+                <div className="loading">Loading...</div>
+                <h3>Adidas</h3>
+                <div className="loading">Loading...</div>
+                <h3>Puma</h3>
+                <div className="loading">Loading...</div>
+                <h3>Crocs</h3>
+                <div className="loading">Loading...</div>
+                <h3>Converse</h3>
+                <div className="loading">Loading...</div>
+            </div>
+         
+        )
     }
 
     return(
