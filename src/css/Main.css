@@ -5,4 +5,5 @@
     flex-direction: column;
     gap: 10px;
     justify-self: center;
+    overflow: hidden;
 }
