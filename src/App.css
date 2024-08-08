@@ -9,3 +9,19 @@ a{
   text-decoration: none;
   color: black;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 35px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
