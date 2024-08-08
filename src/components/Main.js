@@ -10,6 +10,7 @@ function Main(){
     const [newBalance, setNewBalance] = useState([]);
     const [adidas, setAdidas] = useState([]);
     const [puma, setPuma] = useState([]);
+    const [crocs, setCrocs] = useState([]);
     const [converse, setConverse] = useState([]);
     const [loading, setLoading] = useState(true);
     const [selectedShoe, setSelectedShoe] = useState(null);
@@ -20,6 +21,7 @@ function Main(){
     const newBalanceRequest = fetch("http://localhost:8000/newbalance");
     const adidasRequest = fetch("http://localhost:8000/adidas");
     const pumaRequest = fetch("http://localhost:8000/puma");
+    const crocsRequest = fetch("http://localhost:8000/crocs");
     const converseRequest = fetch("http://localhost:8000/converse");
 
     async function fetchData(){
@@ -30,9 +32,10 @@ function Main(){
             newBalanceRequest,
             adidasRequest,
             pumaRequest,
+            crocsRequest,
             converseRequest
         ])
-         .then(([resPopular, resJordan, resNike, resNewBalance, resAdidas, resPuma, resConverse]) =>
+         .then(([resPopular, resJordan, resNike, resNewBalance, resAdidas, resPuma, resCrocs, resConverse]) =>
             Promise.all([
                 resPopular.json(), 
                 resJordan.json(), 
@@ -40,16 +43,18 @@ function Main(){
                 resNewBalance.json(), 
                 resAdidas.json(),
                 resPuma.json(),
+                resCrocs.json(),
                 resConverse.json()
             ])
         )
-         .then(([dataPopular, dataJordan, dataNike, dataNewBalance, dataAdidas, dataPuma, dataConverse]) => {
+         .then(([dataPopular, dataJordan, dataNike, dataNewBalance, dataAdidas, dataPuma, dataCrocs, dataConverse]) => {
             setPopular(dataPopular);
             setJordan(dataJordan);
             setNike(dataNike);
             setNewBalance(dataNewBalance);
             setAdidas(dataAdidas);
             setPuma(dataPuma);
+            setCrocs(dataCrocs);
             setConverse(dataConverse);
          })
          .finally(() => {
@@ -98,6 +103,10 @@ function Main(){
             <div className="rowDivider">
                 <h3>Puma</h3>
                 <Row shoes={puma} onShoeClick={handleShoeClick}/>
+            </div>
+            <div className="rowDivider">
+                <h3>Crocs</h3>
+                <Row shoes={crocs} onShoeClick={handleShoeClick}/>
             </div>
             <div className="rowDivider">
                 <h3>Converse</h3>
