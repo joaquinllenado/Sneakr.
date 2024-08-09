@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../css/NavBar.css';
 import Menu from './Menu';
 import searchButton from "../images/Search.png"
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ function NavBar(){
                 <Menu isOpen={menuOpen} />
             </div>
             <div id="branding">
-                <a href="/">
+                <Link to="/">
                     <h1>
                         <span className="letter">S</span>
                         <span className="letter">n</span>
@@ -38,7 +38,7 @@ function NavBar(){
                         <span className="letter">r</span>
                         <span className="letter">.</span>
                     </h1>
-                </a>
+                </Link>
             </div>
             <input 
                 id="search-bar" 
