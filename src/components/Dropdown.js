@@ -13,6 +13,8 @@ function Dropdown() {
                 <li id="dropdown-item"><Link to="/puma/">Puma</Link></li>
                 <li id="dropdown-item"><Link to="/crocs/">Crocs</Link></li>
                 <li id="dropdown-item"><Link to="/converse/">Converse</Link></li>
+                <li id="dropdown-item"><Link to="/hoka/">Hoka</Link></li>
+                <li id="dropdown-item"><Link to="/on/">On</Link></li>
             </ul>
         </div>
     )

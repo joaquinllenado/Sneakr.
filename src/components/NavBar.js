@@ -2,18 +2,25 @@ import { useState } from 'react';
 import '../css/NavBar.css';
 import Menu from './Menu';
 import searchButton from "../images/Search.png"
+import { useNavigate } from 'react-router-dom';
 
 function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
+    const [query, setQuery] = useState('');
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen)
-    }
+    };
 
     const toggleSearch = () => {
         setSearchOpen(!searchOpen)
-    }
+    };
+
+    const handleSearch = () => {
+        navigate(`/search?q=${query}`);
+    };
 
     return(
         <div className='navbar'>
@@ -33,7 +40,17 @@ function NavBar(){
                     </h1>
                 </a>
             </div>
-            <input id="search-bar" type="text" placeholder="Search for brand, color, etc."/>
+            <input 
+                id="search-bar" 
+                type="text" 
+                placeholder="Search for brand, color, etc."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                    if(e.key ==="Enter")
+                        handleSearch();
+                }}
+            />
             <div id="links-and-buttons">
                 <nav>
                     <ul className="navbar-links">

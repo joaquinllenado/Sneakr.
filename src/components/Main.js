@@ -3,7 +3,7 @@ import Row from "./Row";
 import Modal from "./Modal";
 import "../css/Main.css";
 
-function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse, loading}){
+function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse, HOKA, cloudOn, loading}){
     const [selectedShoe, setSelectedShoe] = useState(null);
 
     const handleShoeClick = (shoe) => {
@@ -30,6 +30,10 @@ function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse,
                 <h3>Crocs</h3>
                 <div className="loading">Loading...</div>
                 <h3>Converse</h3>
+                <div className="loading">Loading...</div>
+                <h3>HOKA</h3>
+                <div className="loading">Loading...</div>
+                <h3>On</h3>
                 <div className="loading">Loading...</div>
             </div>
          
@@ -69,6 +73,14 @@ function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse,
             <div className="rowDivider">
                 <h3>Converse</h3>
                 <Row shoes={converse} onShoeClick={handleShoeClick}/>
+            </div>
+            <div className="rowDivider">
+                <h3>Hoka</h3>
+                <Row shoes={HOKA} onShoeClick={handleShoeClick}/>
+            </div>
+            <div className="rowDivider">
+                <h3>On</h3>
+                <Row shoes={cloudOn} onShoeClick={handleShoeClick}/>
             </div>
             {selectedShoe && (
                 <Modal shoe={selectedShoe} onClose={handleCloseModal} />

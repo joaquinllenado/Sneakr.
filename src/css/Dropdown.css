@@ -11,7 +11,6 @@
     width: 100%;
     justify-content: space-evenly;
     margin: 16px 0;
-    
 }
 
 #dropdown-item {
@@ -27,19 +26,13 @@
     color:cornflowerblue;
 }
 
-@media (max-width: 1000px){
-    #dropdown-list{
+@media (max-width:1500px){
+     #dropdown-list{
         overflow-x: scroll;
+        
     }
-
     #dropdown-item{
         font-size: medium;
     }
-}
 
-@media only screen and (max-width: 767px) {
-    #dropdown-list {
-        justify-content: space-between;
-    }
 }
-
