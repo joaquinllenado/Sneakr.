@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../css/NavBar.css';
 import Menu from './Menu';
 import searchButton from "../images/Search.png"
@@ -22,6 +22,14 @@ function NavBar(){
         navigate(`/search?q=${query}`);
     };
 
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [menuOpen])
+
     return(
         <div className='navbar'>
             <div className="menu" onClick={toggleMenu}>
@@ -30,13 +38,13 @@ function NavBar(){
             <div id="branding">
                 <Link to="/">
                     <h1>
-                        <span className="letter">S</span>
-                        <span className="letter">n</span>
-                        <span className="letter">e</span>
-                        <span className="letter">a</span>
-                        <span className="letter">k</span>
-                        <span className="letter">r</span>
-                        <span className="letter">.</span>
+                        <span className="letter" style={{ animationDelay: '0s' }}>S</span>
+                        <span className="letter" style={{ animationDelay: '0.3s' }}>n</span>
+                        <span className="letter" style={{ animationDelay: '0.6s' }}>e</span>
+                        <span className="letter" style={{ animationDelay: '0.9s' }}>a</span>
+                        <span className="letter" style={{ animationDelay: '1.2s' }}>k</span>
+                        <span className="letter" style={{ animationDelay: '1.5s' }}>r</span>
+                        <span className="letter" style={{ animationDelay: '1.8s' }}>.</span>
                     </h1>
                 </Link>
             </div>
