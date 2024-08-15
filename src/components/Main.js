@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import Row from "./Row";
 import Modal from "./Modal";
+import { TailSpin } from "react-loader-spinner";
 import "../css/Main.css";
 
 function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse, HOKA, cloudOn, loading}){
@@ -17,26 +18,14 @@ function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse,
     if (loading) {
         return(
             <div className="main">
-                <h3>Most Popular</h3>
-                <div className="loading">Loading...</div>
-                <h3>Jordan</h3>
-                <div className="loading">Loading...</div>
-                <h3>Nike</h3>
-                <div className="loading">Loading...</div>
-                <h3>Adidas</h3>
-                <div className="loading">Loading...</div>
-                <h3>Puma</h3>
-                <div className="loading">Loading...</div>
-                <h3>Crocs</h3>
-                <div className="loading">Loading...</div>
-                <h3>Converse</h3>
-                <div className="loading">Loading...</div>
-                <h3>HOKA</h3>
-                <div className="loading">Loading...</div>
-                <h3>On</h3>
-                <div className="loading">Loading...</div>
+                <TailSpin 
+                ariaLabel="tail-spin-loading"
+                height="100"
+                width="100"
+                color="cornflowerblue"
+                wrapperClass="loading"
+                />
             </div>
-         
         )
     }
 

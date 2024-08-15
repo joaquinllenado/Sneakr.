@@ -7,3 +7,7 @@
     justify-self: center;
     overflow: hidden;
 }
+
+.loading {
+    margin: auto;
+}

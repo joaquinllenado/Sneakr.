@@ -28,6 +28,10 @@
     padding: 0 10px;
 }
 
+#shoeName:hover{
+    color: black;
+}
+
 #shoeInfo {
     display: flex;
     flex-direction: column;
