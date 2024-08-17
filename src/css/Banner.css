@@ -3,11 +3,10 @@
     width: 90%;
 }
 .banner {
-    text-align: left;
     width: 100%;
     height: 190px;
     background-color: green;
-    margin: 20px 0;
+    margin: 20px auto;
     background-image: url("../images/puma_brandbanner_1600x400\ \(1\).png");
     background-size:cover;
     background-position: center;
@@ -26,5 +25,11 @@
 @media (max-width:600px){
     .banner{
         padding-left: 180px;
+    }
+}
+
+@media (min-width: 1500px){
+    .banner {
+        width: 1350px;
     }
 }

@@ -30,6 +30,8 @@ function NavBar(){
         }
     }, [menuOpen])
 
+    
+
     return(
         <div className='navbar'>
             <div className="menu" onClick={toggleMenu}>
