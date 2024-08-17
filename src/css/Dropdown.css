@@ -36,3 +36,9 @@
     }
 
 }
+
+@media (min-width: 1500px) {
+    #dropdown-list{
+        width: 1500px;
+    }
+}
