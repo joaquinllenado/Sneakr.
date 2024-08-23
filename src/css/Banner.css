@@ -1,6 +1,7 @@
 .banner-link {
     align-self: center;
     width: 90%;
+    cursor: default;
 }
 .banner {
     width: 100%;
@@ -10,6 +11,7 @@
     background-image: url("../images/puma_brandbanner_1600x400\ \(1\).png");
     background-size:cover;
     background-position: center;
+    cursor: pointer;
 }
 
 @media (max-width:700px){
