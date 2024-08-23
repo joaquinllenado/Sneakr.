@@ -64,10 +64,10 @@ function NavBar(){
             <div id="links-and-buttons">
                 <nav>
                     <ul className="navbar-links">
-                        <li><a href="/news/">News</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/help/">Help</a></li>
-                        <li><a href="/sell/">Sell</a></li>
+                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/help">Help</Link></li>
+                        <li><Link to="/sell">Sell</Link></li>
                     </ul>
                 </nav>
                 <div id="buttons">

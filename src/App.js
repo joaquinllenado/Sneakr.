@@ -4,7 +4,7 @@ import Banner from './components/Banner';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Dropdown from './components/Dropdown';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import MostPopular from "./pages/MostPopular";
 import Jordan from "./pages/Jordan";
 import Nike from "./pages/Nike";
@@ -18,6 +18,10 @@ import "./css/Main.css";
 import { useState, useEffect } from 'react';
 import Search from './pages/Search';
 import OnRunningCloud from './pages/OnRunningCloud';
+import News from './pages/News';
+import About from './pages/About';
+import Help from './pages/Help';
+import Sell from './pages/Sell';
 
 function App() {
   const [popular, setPopular] = useState([]);
@@ -31,6 +35,9 @@ function App() {
   const [hoka, setHoka] = useState([]);
   const [on, setOn] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const location = useLocation();
+  const bannerHiddenPaths = ['/news', '/about', '/help', '/sell'];
 
   const popularRequest = fetch("http://localhost:8000/mostpopular");
   const jordanRequest = fetch("http://localhost:8000/jordan");
@@ -95,7 +102,9 @@ function App() {
     <div className="App">
       <NavBar/>
       <Dropdown/>
-      <Banner/>
+      {!bannerHiddenPaths.includes(location.pathname) &&
+        <Banner/>
+      }
       <Routes>
         <Route path="/" element={<Main popular={popular} jordan={jordan} nike={nike} newBalance={newBalance} adidas={adidas} puma={puma} crocs={crocs} converse={converse} HOKA={hoka} cloudOn={on} loading={loading}/>} />
         <Route path="/mostpopular" element={<MostPopular shoes={popular} loading={loading}/>} />
@@ -109,6 +118,10 @@ function App() {
         <Route path="/hoka" element={<Hoka shoes={hoka} loading={loading}/>} />
         <Route path="/on" element={<OnRunningCloud shoes={on} loading={loading}/>} />
         <Route path="/search" element={<Search />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/sell" element={<Sell />} />
       </Routes>
       <Footer/>
     </div>
