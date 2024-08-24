@@ -4,7 +4,7 @@ function BackToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
-        if (window.pageYOffset > 300) {
+        if (window.scrollY > 300) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
@@ -34,7 +34,7 @@ function BackToTopButton() {
             <style jsx>{`
                 .backToTop {
                     position: fixed;
-                    bottom: 150px;
+                    bottom: 20px;
                     right: 20px;
                     width: 50px;
                     height: 50px;

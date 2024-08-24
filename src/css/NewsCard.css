@@ -16,7 +16,7 @@
 
 .imageSection {
     height: 700px;
-    width: 900px;
+    max-width: 900px;
 }
 
 .imageSection img {
@@ -84,4 +84,14 @@
         width: 100%;
         height: 70%;
     }
+}
+
+@media (min-width: 1500px){
+    .imageSection {
+        margin: auto;
+    }
+    .textSection {
+        margin: auto;
+    }
+
 }
