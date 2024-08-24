@@ -64,10 +64,10 @@ function NavBar(){
             <div id="links-and-buttons">
                 <nav>
                     <ul className="navbar-links">
-                        <li><Link to="/news">News</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/help">Help</Link></li>
-                        <li><Link to="/sell">Sell</Link></li>
+                        <li><Link to="/news" onClick={menuOpen ? toggleMenu : ''}>News</Link></li>
+                        <li><Link to="/about" onClick={menuOpen ? toggleMenu : ''}>About</Link></li>
+                        <li><Link to="/help" onClick={menuOpen ? toggleMenu : ''}>Help</Link></li>
+                        <li><Link to="/sell" onClick={menuOpen ? toggleMenu : ''}>Sell</Link></li>
                     </ul>
                 </nav>
                 <div id="buttons">

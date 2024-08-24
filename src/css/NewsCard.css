@@ -81,8 +81,7 @@
     }
 
     .imageSection img {
-        width: 100%;
-        height: 70%;
+        object-fit:fill;
     }
 }
 

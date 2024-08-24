@@ -10,19 +10,19 @@ function News(){
                 reversed={false} 
                 thumbnail={image1}
                 title="Buyer's Guide: Nike Kobe Shoes"
-                description="Nike and Kobe Bryant had a partnership unlike any other. We go into Kobe's sneaker journey and what's next to come from the Swoosh in our Nike Kobe Shoes Buyer's Guide."
+                description="Dive into Kobe Bryant's legendary sneaker journey with Nike, where style met performance in game-changing ways. This guide takes you through the iconic kicks that defined Kobe's legacy and left a lasting mark on pop culture."
             />
             <NewsCard 
                 reversed={true} 
                 thumbnail={image2}
                 title="Buyer's Guide: Jordan Shoes"
-                description="Before buying a pair of Air Jordan 1s, dive into our Buyer's Guide to get familiar with the sneaker's long and colorful history."
+                description="Step into the world of Jordan, where basketball meets street style in the most iconic way. This guide uncovers the must-have kicks that have defined sneaker culture and kept Michael Jordan's legacy alive in every step."
             />
             <NewsCard 
                 reversed={false} 
                 thumbnail={image3}
                 title="Buyer's Guide: Yeezy Shoes"
-                description="Adidas' collaboration with Yeezy has redefined the sneaker landscape, blending cutting-edge design with cultural influence. The partnership has produced iconic, sought-after shoes that continue to make waves in the fashion and footwear industries."
+                description="Unlock the hype behind Yeezy, the fusion of Kanye West's visionary style and cutting-edge design. This guide walks you through the must-have Yeezy kicks that have redefined sneaker culture and become a global phenomenon."
             />
         </div>
     )

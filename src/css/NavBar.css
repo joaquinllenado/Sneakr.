@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     text-wrap: nowrap;
+    width: 500px;
 }
 
 .navbar-links {
@@ -17,12 +18,15 @@
     justify-content:space-evenly;
     width: 300px;
     padding: 0;
+    margin-left: 10px;
+    margin-right: -10px;
 }
 
 .navbar-links li {
-    width: 10px;
+    width: 50px;
     font-size: large;
     font-weight: 475;
+    text-align: center;
 }
 
 #branding {
@@ -62,7 +66,7 @@
 #search-bar {
     height: 40px;
     width: 70vw;
-    min-width: 20vw;
+    min-width: 10vw;
     border: 1px solid lightgray;
     padding-left: 10px;
     font-size: large;
@@ -70,7 +74,7 @@
     background-color: rgb(251, 255, 255);
 }
 
-.buttons {
+#buttons {
     display: flex;
 }
 
