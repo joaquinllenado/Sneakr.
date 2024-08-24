@@ -22,6 +22,7 @@ import News from './pages/News';
 import About from './pages/About';
 import Help from './pages/Help';
 import Sell from './pages/Sell';
+import BackToTopButton from './components/BackToTopButton';
 
 function App() {
   const [popular, setPopular] = useState([]);
@@ -123,6 +124,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="/sell" element={<Sell />} />
       </Routes>
+      <BackToTopButton />
       <Footer/>
     </div>
   );
