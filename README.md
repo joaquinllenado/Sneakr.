@@ -1,7 +1,5 @@
 # Sneakr
 
-![Sneakr Banner](link_to_your_banner_image)
-
 ## Overview
 
 **Sneakr** is a web application that aggregates data from popular sneaker marketplaces such as StockX, Goat, and Flight Club. It displays the lowest prices for each sneaker, allowing users to compare and find the best deals in real-time. This project is inspired by the StockX platform and is built using the Sneaks-API.
@@ -18,7 +16,6 @@
 
 ### Homepage
 
-![Homepage Screenshot]
 ![sneakr-homepage](https://github.com/user-attachments/assets/379541bf-0a4f-40e8-a569-91ca789bd415)
 ![sneakr-homepage-mobile](https://github.com/user-attachments/assets/e094de66-9e68-4446-9452-384b29f761a2)
 
@@ -27,7 +24,6 @@
 
 ### News Page
 
-![News Page Screenshot]
 ![sneakr-news](https://github.com/user-attachments/assets/82ee7757-fc96-4589-ad82-be01ec6146bb)
 ![sneakr-news-mobile](https://github.com/user-attachments/assets/c28a4c8d-92e8-4f56-9962-d778a604ca8a)
 
@@ -36,7 +32,6 @@
 
 ### Jordan Page
 
-![Jordan Page Screenshot]
 ![sneakr-jordan](https://github.com/user-attachments/assets/a63a0b7b-6dd4-47a8-9435-4af99ee569b0)
 ![sneakr-jordan-mobile](https://github.com/user-attachments/assets/088609d4-57ae-49cf-83de-77255a772c88)
 
@@ -45,7 +40,6 @@
 
 ### Nike Page
 
-![Nike Page Screenshot]
 ![sneakr-nike](https://github.com/user-attachments/assets/7bf2d64d-3282-46a9-91c8-60468bee95f9)
 ![sneakr-nike-mobile](https://github.com/user-attachments/assets/27f2b62e-d875-43f6-b9ec-f40e395d58d1)
 
@@ -114,10 +108,6 @@ Although this is originally a personal project, we welcome contributions to the 
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
 3. Submit a pull request with a clear description of your changes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
