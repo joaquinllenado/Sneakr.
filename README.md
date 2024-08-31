@@ -67,6 +67,7 @@
 git clone https://github.com/joaquinllenado/Sneakr.git
 cd Sneakr
 npm install
+```
 
 #### Backend
 
@@ -74,6 +75,7 @@ npm install
 git clone https://github.com/joaquinllenado/sneakr-server.git
 cd sneakr-server
 npm install
+```
 
 ### Run the Applications
 
@@ -84,6 +86,7 @@ Start the backend server first:
 ```bash
 cd sneakr-server
 npm start
+```
 
 The backend server will be running on `http://localhost:8000`.
 
@@ -94,6 +97,7 @@ After starting the backend, run the frontend:
 ```bash
 cd Sneakr
 npm start
+```
 
 The frontend application will be available at `http://localhost:3000`.
 
