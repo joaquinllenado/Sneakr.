@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Sneakr** is a web application that aggregates data from popular sneaker marketplaces such as StockX, Goat, and Flight Club. It displays the lowest prices for each sneaker, allowing users to compare and find the best deals in real-time. This project is inspired by the StockX platform and is built using the Sneaks-API.
+**Sneakr** is a web application that aggregates data from popular sneaker marketplaces such as StockX, Goat, and Flight Club. It displays the lowest prices for each sneaker, allowing users to compare and find the best deals in real-time. This project is inspired by the StockX platform and is built using the [Sneaks-API](https://github.com/druv5319/Sneaks-API).
 
 ## Features
 
