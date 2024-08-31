@@ -51,19 +51,19 @@
 
 ### Clone the Repositories
 
-#### Frontend
-
-```bash
-git clone https://github.com/joaquinllenado/Sneakr.git
-cd Sneakr
-npm install
-```
-
 #### Backend
 
 ```bash
 git clone https://github.com/joaquinllenado/sneakr-server.git
 cd sneakr-server
+npm install
+```
+
+#### Frontend
+
+```bash
+git clone https://github.com/joaquinllenado/Sneakr.git
+cd Sneakr
 npm install
 ```
 
