@@ -28,9 +28,7 @@ function NavBar(){
         } else {
             document.body.classList.remove('no-scroll');
         }
-    }, [menuOpen])
-
-    
+    }, [menuOpen])    
 
     return(
         <div className='navbar'>

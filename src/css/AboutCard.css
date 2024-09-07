@@ -1,0 +1,30 @@
+.aboutCard {
+    height: 300px;
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+}
+
+.aboutCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cardContent {
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.cardContent h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.cardContent p {
+    font-size: 1em;
+    line-height: 1.5;
+}
