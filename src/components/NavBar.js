@@ -35,7 +35,7 @@ function NavBar(){
             <div className="menu" onClick={toggleMenu}>
                 <Menu isOpen={menuOpen} />
             </div>
-            <div id="branding">
+            <div id="branding" onClick={(e) => setQuery('')}>
                 <Link to="/">
                     <h1> Sneakr.</h1>
                 </Link>
