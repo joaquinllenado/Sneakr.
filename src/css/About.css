@@ -63,24 +63,12 @@
 .about2:hover {
     color: cornflowerblue
 }
-
-@keyframes colorTransition {
-    0% {
-      color: black;
-    }
-    50% {
-      color: cornflowerblue;
-    }
-    100% {
-      color: black;
-    }
-  }
   
-  .about2 span {
+.about2 span {
     display: inline-block;
     animation: none;
     color: black;
-  }
+}
 
 .aboutMiddle, .aboutRight {
     width: 30%;

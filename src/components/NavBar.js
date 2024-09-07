@@ -37,15 +37,7 @@ function NavBar(){
             </div>
             <div id="branding">
                 <Link to="/">
-                    <h1>
-                        <span className="letter" style={{ animationDelay: '0s' }}>S</span>
-                        <span className="letter" style={{ animationDelay: '0.3s' }}>n</span>
-                        <span className="letter" style={{ animationDelay: '0.6s' }}>e</span>
-                        <span className="letter" style={{ animationDelay: '0.9s' }}>a</span>
-                        <span className="letter" style={{ animationDelay: '1.2s' }}>k</span>
-                        <span className="letter" style={{ animationDelay: '1.5s' }}>r</span>
-                        <span className="letter" style={{ animationDelay: '1.8s' }}>.</span>
-                    </h1>
+                    <h1> Sneakr.</h1>
                 </Link>
             </div>
             <input 

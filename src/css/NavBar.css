@@ -37,29 +37,10 @@
 
 #branding h1 {
     cursor:pointer;
+    transition: color 0.5s ease;
 }
 
-@keyframes lightUpFadeOut {
-    0% {
-        color:black;
-    }
-    50% {
-        color: cornflowerblue;
-    }
-    99% {
-        color: black;
-    }
-}
-
-.letter {
-    font-size: 2rem;
-    animation: lightUpFadeOut 1.5s forwards;;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-}
-
-.letter:hover {
+#branding h1:hover {
     color:cornflowerblue;
 }
 
