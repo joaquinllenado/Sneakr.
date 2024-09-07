@@ -13,7 +13,8 @@ function Search(){
         fetch(`http://localhost:8000/search?q=${query}`)
             .then(response => response.json())
             .then(data => setResults(data))
-            .catch(error => console.error('Error:', error));
+            .catch(error => console.error('Error:', error))
+
     }, [location.search]);
 
     const handleShoeClick = (shoe) => {
