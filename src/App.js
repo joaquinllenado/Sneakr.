@@ -1,28 +1,9 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import Banner from './components/Banner';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Dropdown from './components/Dropdown';
+import './css/Main.css';
+import { NavBar, Banner, Main, Footer, Dropdown, BackToTopButton } from './components';
+import { MostPopular, Jordan, Nike, NewBalance, Adidas, Puma, Crocs, Converse, Hoka, Search, OnRunningCloud, News, About, Help, Sell } from './pages';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import MostPopular from "./pages/MostPopular";
-import Jordan from "./pages/Jordan";
-import Nike from "./pages/Nike";
-import NewBalance from './pages/NewBalance';
-import Adidas from './pages/Adidas';
-import Puma from './pages/Puma';
-import Crocs from './pages/Crocs';
-import Converse from './pages/Converse';
-import Hoka from './pages/Hoka';
-import "./css/Main.css";
 import { useState, useEffect } from 'react';
-import Search from './pages/Search';
-import OnRunningCloud from './pages/OnRunningCloud';
-import News from './pages/News';
-import About from './pages/About';
-import Help from './pages/Help';
-import Sell from './pages/Sell';
-import BackToTopButton from './components/BackToTopButton';
 
 function App() {
   const [popular, setPopular] = useState([]);
