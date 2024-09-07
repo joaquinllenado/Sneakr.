@@ -1,81 +1,54 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Row from "./Row";
 import Modal from "./Modal";
 import { TailSpin } from "react-loader-spinner";
 import "../css/Main.css";
 
-function Main({popular, jordan, nike, newBalance, adidas, puma, crocs, converse, HOKA, cloudOn, loading}){
-    const [selectedShoe, setSelectedShoe] = useState(null);
+const categories = [
+  { name: "Most Popular", key: "mostpopular" },
+  { name: "Jordan", key: "jordan" },
+  { name: "Nike", key: "nike" },
+  { name: "New Balance", key: "newbalance" },
+  { name: "Adidas", key: "adidas" },
+  { name: "Puma", key: "puma" },
+  { name: "Crocs", key: "crocs" },
+  { name: "Converse", key: "converse" },
+  { name: "Hoka", key: "hoka" },
+  { name: "On", key: "on" },
+];
 
-    const handleShoeClick = (shoe) => {
-        setSelectedShoe(shoe);
-    };
+function Main({ loading, ...shoesData }) {
+  const [selectedShoe, setSelectedShoe] = useState(null);
 
-    const handleCloseModal = () => {
-        setSelectedShoe(null);
-    }
+  const handleShoeClick = (shoe) => setSelectedShoe(shoe);
 
-    if (loading) {
-        return(
-            <div className="main">
-                <TailSpin 
-                ariaLabel="tail-spin-loading"
-                height="100"
-                width="100"
-                color="cornflowerblue"
-                wrapperClass="loading"
-                />
-            </div>
-        )
-    }
+  const handleCloseModal = () => setSelectedShoe(null);
 
-    return(
-        <div className="main">
-            <div className="rowDivider">
-                <h3>Most Popular</h3>
-                <Row shoes={popular} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Jordan</h3>
-                <Row shoes={jordan} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Nike</h3>
-                <Row shoes={nike} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>New Balance</h3>
-                <Row shoes={newBalance} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Adidas</h3>
-                <Row shoes={adidas} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Puma</h3>
-                <Row shoes={puma} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Crocs</h3>
-                <Row shoes={crocs} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Converse</h3>
-                <Row shoes={converse} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>Hoka</h3>
-                <Row shoes={HOKA} onShoeClick={handleShoeClick}/>
-            </div>
-            <div className="rowDivider">
-                <h3>On</h3>
-                <Row shoes={cloudOn} onShoeClick={handleShoeClick}/>
-            </div>
-            {selectedShoe && (
-                <Modal shoe={selectedShoe} onClose={handleCloseModal} />
-            )}
+  if (loading) {
+    return (
+      <div className="main">
+        <TailSpin
+          ariaLabel="tail-spin-loading"
+          height="100"
+          width="100"
+          color="cornflowerblue"
+          wrapperClass="loading"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="main">
+      {categories.map(({ name, key }) => (
+        <div key={key} className="rowDivider">
+          <h3>{name}</h3>
+          <Row shoes={shoesData[key]} onShoeClick={handleShoeClick} />
         </div>
-    )
+      ))}
+      {selectedShoe && <Modal shoe={selectedShoe} onClose={handleCloseModal} />}
+    </div>
+  );
 }
 
 export default Main;

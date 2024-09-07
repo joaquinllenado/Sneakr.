@@ -40,14 +40,17 @@
 
 .resellSites {
     width: 100%;
-    display: flex;
-    align-items: flex-start;
+    display:flex;
+    justify-content: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
 }
 
 .resellSites li{
     text-decoration: none;
     font-size: small;
-    width: 100%;
     margin-top: 4px;
     margin-right: 4px;
     white-space: nowrap;

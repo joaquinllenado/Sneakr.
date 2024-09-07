@@ -5,7 +5,7 @@ import { MostPopular, Jordan, Nike, NewBalance, Adidas, Puma, Crocs, Converse, H
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const categories = ['popular', 'jordan', 'nike', 'newbalance', 'adidas', 'puma', 'crocs', 'converse', 'hoka', 'on'];
+const categories = ['mostpopular', 'jordan', 'nike', 'newbalance', 'adidas', 'puma', 'crocs', 'converse', 'hoka', 'on'];
 const categoryFetchUrls = categories.reduce((acc, category) => {
   acc[category] = `http://localhost:8000/${category}`;
   return acc;
@@ -39,7 +39,6 @@ function App() {
     fetchData();
   }, []);
 
-
   return (
     <div className="App">
       <NavBar/>
@@ -49,7 +48,7 @@ function App() {
       }
       <Routes>
       <Route path="/" element={<Main {...data} loading={loading}/>} />
-        <Route path="/mostpopular" element={<MostPopular shoes={data.popular} loading={loading}/>} />
+        <Route path="/mostpopular" element={<MostPopular shoes={data.mostpopular} loading={loading}/>} />
         <Route path="/jordan" element={<Jordan shoes={data.jordan} loading={loading}/>} />
         <Route path="/nike" element={<Nike shoes={data.nike} loading={loading}/>} />
         <Route path="/newbalance" element={<NewBalance shoes={data.newbalance} loading={loading}/>} />
