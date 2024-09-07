@@ -11,13 +11,34 @@ function ShoeCard({shoe, toggleModal}) {
             <p>Lowest Resell Prices:</p>
             <ul className="resellSites">
                 {lowestResellPrice.stockX &&
-                    <li><a href={resellLinks.stockX}>StockX: <span>${lowestResellPrice.stockX}</span></a></li>
+                    <li>
+                        <a 
+                            href={resellLinks.stockX} 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            StockX: <span>${lowestResellPrice.stockX}</span>
+                        </a>
+                    </li>
                 }
                 {lowestResellPrice.goat &&
-                    <li><a href={resellLinks.goat}>Goat: <span>${lowestResellPrice.goat}</span></a></li>
+                    <li>
+                        <a 
+                            href={resellLinks.goat} 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            Goat: <span>${lowestResellPrice.goat}</span>
+                        </a>
+                    </li>
                 }
                 {lowestResellPrice.flightClub &&
-                    <li><a href={resellLinks.flightClub}>Flight Club: <span>${lowestResellPrice.flightClub}</span></a></li>
+                    <li>
+                        <a 
+                            href={resellLinks.flightClub} 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            Flight Club: <span>${lowestResellPrice.flightClub}</span>
+                        </a>
+                    </li>
                 }
             </ul>
         </div>
