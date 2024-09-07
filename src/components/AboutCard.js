@@ -1,5 +1,6 @@
 import "../css/AboutCard.css";
 
+//TODO: Reformat UI 
 function AboutCard({title, content}) {
     return(
         <div className="aboutCard">

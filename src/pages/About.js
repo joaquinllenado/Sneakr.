@@ -2,6 +2,7 @@ import "../css/About.css";
 import Jordan1 from "../images/Jordan1.png"
 import AboutCard from "../components/AboutCard";
 
+//TODO: Reformat UI 
 function About(){
     return(
         <>
