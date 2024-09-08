@@ -27,7 +27,8 @@ function Search(){
 
     return(
         <div className="main">
-            <h3>{query}</h3>
+            <h3>Search Results for "{query}":</h3>
+            <p className="results">Showing {results.length} results</p>
             <div className="rowDivider">
                 <Row shoes={results.slice(0,5)} onShoeClick={handleShoeClick} />
             </div>
