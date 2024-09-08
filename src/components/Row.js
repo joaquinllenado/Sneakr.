@@ -8,7 +8,7 @@ function Row({ shoes = [], onShoeClick }) {
     <div className="row">
       {displayedShoes.map((shoe) => (
         <ShoeCard
-          key={shoe.id || shoe.name}  // Use a unique identifier if available
+          key={shoe.styleID}
           shoe={shoe}
           toggleModal={() => onShoeClick(shoe)}
         />

@@ -20,7 +20,7 @@ function ShoeCard({ shoe, toggleModal }) {
             platform.price && (
               <li key={platform.name}>
                 <a href={platform.link} target="_blank" rel="noopener noreferrer">
-                  {platform.name}: <span>${platform.price}</span>
+                  {platform.name}: <span className="price">${platform.price}</span>
                 </a>
               </li>
             )
