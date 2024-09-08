@@ -35,10 +35,21 @@
 #shoeInfo {
     display: flex;
     flex-direction: column;
+    gap: 0;
 }
 
 #shoeDescription {
     font-size: medium;
+}
+
+#retail {
+    font-size: medium;
+}
+
+.modal .resellSites li{
+    font-size: medium;
+    margin-top: 0;
+    margin-right: 10px;
 }
 
 .modal-close {
