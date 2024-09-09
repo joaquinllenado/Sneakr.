@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const categories = ['mostpopular', 'jordan', 'nike', 'newbalance', 'adidas', 'puma', 'crocs', 'converse', 'hoka', 'on'];
 const categoryFetchUrls = categories.reduce((acc, category) => {
-  acc[category] = `http://localhost:8000/${category}`;
+  acc[category] = `https://sneakr-server.vercel.app/${category}`;
   return acc;
 }, {});
 
