@@ -10,7 +10,7 @@ function Search(){
     const query = new URLSearchParams(location.search).get('q');
     
     useEffect(() => {
-        fetch(`http://localhost:8000/search?q=${query}`)
+        fetch(`https://sneakr-server.vercel.app/search?q=${query}`)
             .then(response => response.json())
             .then(data => setResults(data))
             .catch(error => console.error('Error:', error))
