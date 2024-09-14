@@ -18,6 +18,19 @@
     margin: auto;
 }
 
+.error {
+    display: flex;
+    align-items: center;
+}
+
+.error img {
+    height: 50px;
+}
+
+.error p {
+    font-size: large;
+}
+
 @media (min-width: 1500px) {
     .main {
         width: 1340px;
