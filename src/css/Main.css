@@ -6,6 +6,7 @@
     gap: 10px;
     justify-self: center;
     overflow: hidden;
+    background-color: white;
 }
 
 .results {
@@ -16,6 +17,10 @@
 
 .loading {
     margin: auto;
+}
+
+.rowDivider {
+    animation: fadeIn 1s ease forwards;
 }
 
 .error {
@@ -35,5 +40,16 @@
     .main {
         width: 1340px;
         margin: auto;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
