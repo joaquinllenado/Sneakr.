@@ -6,12 +6,14 @@
     margin-top: 20px;
     align-items: center;
     flex-wrap: nowrap;
+    animation: slideIn 1s ease forwards;
 }
 
 .reversed {
     flex-direction: row-reverse;
     color: white;
     background-color: black;
+    animation: slideInReversed 2s ease forwards;
 }
 
 .imageSection {
@@ -64,6 +66,28 @@
 
 .reversed .readButton:hover {
     background-color: cornflowerblue;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInReversed {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 1000px) {
