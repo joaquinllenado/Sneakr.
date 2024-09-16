@@ -12,6 +12,10 @@ a{
   color: black;
 }
 
+button:focus, a:focus {
+  outline: 2px solid blue;
+}
+
 ::-webkit-scrollbar{
   width: 10px;
   height: 10px;
