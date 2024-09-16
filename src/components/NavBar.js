@@ -32,7 +32,7 @@ function NavBar(){
 
     return(
         <div className='navbar'>
-            <div className="menu" onClick={toggleMenu}>
+            <div className="menu" onClick={toggleMenu} tabIndex="0" aria-expanded={menuOpen} aria-controls="navbar-links">
                 <Menu isOpen={menuOpen} />
             </div>
             <div id="branding" onClick={(e) => setQuery('')}>
@@ -44,6 +44,7 @@ function NavBar(){
                 id="search-bar" 
                 type="text" 
                 placeholder="Search for brand, color, etc."
+                aria-label="Search for shoes by brand, color, etc."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={(e) => {
@@ -52,7 +53,7 @@ function NavBar(){
                 }}
             />
             <div id="links-and-buttons">
-                <nav>
+                <nav aria-label="Main Navigation">
                     <ul className="navbar-links">
                         <li><Link to="/news" onClick={menuOpen ? toggleMenu : ''}>News</Link></li>
                         <li><Link to="/about" onClick={menuOpen ? toggleMenu : ''}>About</Link></li>
@@ -67,7 +68,7 @@ function NavBar(){
             </div>
 
             <div className="search-bar-small" onClick={toggleSearch}>
-                <img src={searchButton} alt="search"/>
+                <img src={searchButton} alt="Open search input"/>
             </div>
 
             <style jsx>{`

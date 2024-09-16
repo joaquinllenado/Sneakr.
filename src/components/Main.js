@@ -26,28 +26,33 @@ function Main({ loading, ...shoesData }) {
 
   if (loading) {
     return (
-      <div className="main">
+      <main className="main" aria-live="polite">
         <TailSpin
-          ariaLabel="tail-spin-loading"
+          ariaLabel="Loading spinner"
           height="100"
           width="100"
           color="cornflowerblue"
           wrapperClass="loading"
         />
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="main">
+    <main className="main">
       {categories.map(({ name, key }) => (
         <div key={key} className="rowDivider">
           <h3>{name}</h3>
           <Row shoes={shoesData[key]} onShoeClick={handleShoeClick} />
         </div>
       ))}
-      {selectedShoe && <Modal shoe={selectedShoe} onClose={handleCloseModal} />}
-    </div>
+      {selectedShoe && <Modal 
+                          shoe={selectedShoe} 
+                          onClose={handleCloseModal} 
+                          aria-labelledby="modal-title"
+                          aria-describedby="modal-description"
+                        />}
+    </main>
   );
 }
 
