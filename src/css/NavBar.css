@@ -1,38 +1,26 @@
 .navbar {
-    display:flex;
-    align-items: center;
+    display: inline-flex;
     width: 100%;
     border-bottom: 1px solid lightgray;
+    height: 70px;
+    justify-content: center;
 }
 
-#links-and-buttons{
-    display: flex;
+#navbar-items {
+    display:flex;
     align-items: center;
-    text-wrap: nowrap;
-    width: 500px;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.navbar-links {
-    display: flex;
-    list-style: none;
-    justify-content:space-evenly;
-    width: 300px;
-    padding: 0;
-    margin-left: 10px;
-    margin-right: -10px;
-}
-
-.navbar-links li {
-    width: 50px;
-    font-size: large;
-    font-weight: 475;
+#branding, #github{
     text-align: center;
-}
-
-#branding {
-    text-align: center;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
     width: 145px;
+}
+
+#hamburger-menu {
+    display: none;
 }
 
 #branding h1 {
@@ -46,44 +34,19 @@
 
 #search-bar {
     height: 40px;
-    width: 70vw;
+    width: 60vw;
     min-width: 10vw;
     border: 1px solid lightgray;
-    padding-left: 10px;
+    padding: 0 10px;
     font-size: large;
     font-weight: light;
     background-color: rgb(251, 255, 255);
 }
 
-#buttons {
-    display: flex;
-}
-
-.button {
-    height: 32px;
-    width: 75px;
-    font-size:medium;
-    margin: 0 4px;
+#github {
+    height: 40px;
+    width: 40px;
     cursor: pointer;
-    border: 1px solid black;
-}
-
-.login {
-    background-color: white;
-    margin-left: 20px;
-    transition: background-color 0.5s ease;
-}
-
-.login:hover {
-    background-color: black;
-    color: white;
-}
-
-.signup {
-    background-color: black;
-    color: white;
-    width: 90px;
-    text-wrap:nowrap;
 }
 
 .menu {
@@ -101,41 +64,50 @@
 }
 
 @media (max-width: 767px){
-    .menu{
+    #navbar-items{
+        padding: 0 5px;
+    }
+
+    #hamburger-menu{
         display: flex;
+
     }
 
-    #search-bar{
-        display: none;
-    }
-
-    #links-and-buttons{
+    #hb-items {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
         position: fixed;
-        left: 0;
         top: 87px;
         width: 100%;
         height: calc(100vh - 87px);
         background-color: white;
         z-index: 10;
         overflow-y: auto;
+        animation: hamburgerSlide 0.2s ease-out;
     }
 
-    .navbar-links{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .navbar-links li{
-        border: 1px solid lightgray;
+    #dropdown-list-hb {
+        list-style: none;
+        font-size: x-large;
+        line-height: 4rem;
         text-align: center;
-        width: 100%;
+        padding: 0;
+    }
+
+    #github-hb {
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    #search-bar{
+        display: none;
     }
     
-    #branding{
-        text-align: center;
-        margin: auto;
+    #github{
+        display: none;
     }
 
     .search-bar-small{
@@ -143,6 +115,29 @@
         height: 40px;
         width: 40px;
         cursor: pointer;
-        margin: 0 10px;
+    }
+
+    #branding{
+        margin: auto;
+    }
+}
+
+@media (max-width:1870px){
+    .navbar{
+        justify-content: left;
+    }
+    #search-bar{
+        width: 80vw;
+    }
+}
+
+@keyframes hamburgerSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
