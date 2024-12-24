@@ -7,8 +7,8 @@
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
-    justify-content: space-evenly;
-}
+    justify-content:space-evenly;
+    }
 
 .shoeCard img {
     max-width: 75%;
@@ -37,11 +37,20 @@
     margin-bottom: -10px;
 }
 
+#resellPrices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 5px;
+}
+
 .resellSites {
     width: 100%;
     display:flex;
     justify-content: left;
     list-style: none;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     gap: 5px;
@@ -61,4 +70,22 @@
 
 .resellSites a:hover {
     color:cornflowerblue;
+}
+
+@media (max-width:767px) {
+    .shoeCard {
+        min-height: 150px;
+        min-width: 150px;
+
+    }
+    .resellSites {
+        font-size: 0.8rem;
+        line-height: 2rem; 
+        gap: 5px;
+    }
+    .resellSites li {
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 }

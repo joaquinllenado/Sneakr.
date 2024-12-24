@@ -1,13 +1,18 @@
 .row {
-    display: flex;
+    display: grid;
     width: 100%;
-    justify-content: left;
     gap: 20px;
     padding: 0px 5px;
+    grid-template-columns: repeat(6, 1fr);
+    overflow-x: auto;
 }
 
-@media only screen and (max-width: 1450px) {
+
+
+@media (max-width: 767px) {
     .row {
-        overflow-x: scroll;
+        overflow: hidden;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
