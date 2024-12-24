@@ -77,16 +77,16 @@ function Search(){
             <h3>Search Results for "{query}":</h3>
             <p className="results">Showing {results.length} results</p>
             <div className="rowDivider">
-                <Row shoes={results.slice(0,5)} onShoeClick={handleShoeClick} />
+                <Row shoes={results.slice(0,6)} onShoeClick={handleShoeClick} />
             </div>
             <div className="rowDivider">
-                <Row shoes={results.slice(5,10)} onShoeClick={handleShoeClick} />
+                <Row shoes={results.slice(6,12)} onShoeClick={handleShoeClick} />
             </div>
             <div className="rowDivider">
-                <Row shoes={results.slice(10,15)} onShoeClick={handleShoeClick} />
+                <Row shoes={results.slice(12,18)} onShoeClick={handleShoeClick} />
             </div>
             <div className="rowDivider">
-                <Row shoes={results.slice(15,20)} onShoeClick={handleShoeClick} />
+                <Row shoes={results.slice(18,24)} onShoeClick={handleShoeClick} />
             </div>
             {selectedShoe && (
             <Modal shoe={selectedShoe} onClose={handleCloseModal} />

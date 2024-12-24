@@ -26,10 +26,16 @@ function MostPopular({shoes, loading}){
         <div className="main">
             <h3>Most Popular</h3>
             <div className="rowDivider">
-                <Row shoes={shoes.slice(0,5)} onShoeClick={handleShoeClick} />
+                <Row shoes={shoes.slice(0,6)} onShoeClick={handleShoeClick} />
             </div>
             <div className="rowDivider">
-                <Row shoes={shoes.slice(5,10)} onShoeClick={handleShoeClick} />
+                <Row shoes={shoes.slice(6,12)} onShoeClick={handleShoeClick} />
+            </div>
+            <div className="rowDivider">
+                <Row shoes={shoes.slice(12,18)} onShoeClick={handleShoeClick} />
+            </div>
+            <div className="rowDivider">
+                <Row shoes={shoes.slice(18,24)} onShoeClick={handleShoeClick} />
             </div>
             {selectedShoe && (
             <Modal shoe={selectedShoe} onClose={handleCloseModal} />

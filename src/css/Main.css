@@ -1,5 +1,5 @@
 .main {
-    width: 90%;
+    width: 95%;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -38,8 +38,16 @@
 
 @media (min-width: 1500px) {
     .main {
-        width: 1340px;
+        width: auto;
         margin: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        width: 98%;
+        padding: 0;
+        gap: 0;
     }
 }
 
