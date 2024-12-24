@@ -2,7 +2,7 @@ import ShoeCard from "./ShoeCard";
 import "../css/Row.css";
 
 function Row({ shoes = [], onShoeClick }) {
-  const displayedShoes = shoes.slice(0, 5);
+  const displayedShoes = shoes.slice(0, 6);
 
   return (
     <div className="row">
