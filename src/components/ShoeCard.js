@@ -13,19 +13,21 @@ function ShoeCard({ shoe, toggleModal }) {
     <div className="shoeCard" onClick={toggleModal}>
       <img src={thumbnail} alt={shoeName} />
       <p id="shoeName">{shoeName}</p>
-      <p>Lowest Resell Prices:</p>
-      <ul className="resellSites">
-        {resellPlatforms.map(
-          (platform) =>
-            platform.price && (
-              <li key={platform.name}>
-                <a href={platform.link} target="_blank" rel="noopener noreferrer">
-                  {platform.name}: <span className="price">${platform.price}</span>
-                </a>
-              </li>
-            )
-        )}
-      </ul>
+      <div id="resellPrices">
+        <p>Lowest Resell Prices:</p>
+        <ul className="resellSites">
+          {resellPlatforms.map(
+            (platform) =>
+              platform.price && (
+                <li key={platform.name}>
+                  <a href={platform.link} target="_blank" rel="noopener noreferrer">
+                    {platform.name}: <span className="price">${platform.price}</span>
+                  </a>
+                </li>
+              )
+          )}
+        </ul>
+    </div>
     </div>
   );
 }

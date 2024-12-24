@@ -46,12 +46,13 @@ function Main({ loading, ...shoesData }) {
           <Row shoes={shoesData[key]} onShoeClick={handleShoeClick} />
         </div>
       ))}
-      {selectedShoe && <Modal 
-                          shoe={selectedShoe} 
-                          onClose={handleCloseModal} 
-                          aria-labelledby="modal-title"
-                          aria-describedby="modal-description"
-                        />}
+      {selectedShoe && 
+        <Modal 
+          shoe={selectedShoe} 
+          onClose={handleCloseModal} 
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
+        />}
     </main>
   );
 }
