@@ -47,7 +47,7 @@ function App() {
         <Banner/>
       }
       <Routes>
-      <Route path="/" element={<Main {...data} loading={loading}/>} />
+        <Route path="/" element={<Main {...data} loading={loading}/>} />
         <Route path="/mostpopular" element={<MostPopular shoes={data.mostpopular} loading={loading}/>} />
         <Route path="/jordan" element={<Jordan shoes={data.jordan} loading={loading}/>} />
         <Route path="/nike" element={<Nike shoes={data.nike} loading={loading}/>} />

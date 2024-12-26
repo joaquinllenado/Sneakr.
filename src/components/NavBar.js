@@ -26,7 +26,7 @@ function NavBar(){
                     <Hamburger size={35} toggled={menuOpen} toggle={setMenuOpen}/>
                     {menuOpen && (
                         <div id="hb-items">
-                            <ul id="dropdown-list-hb">
+                            <ul id="dropdown-list-hb" onClick={() => setMenuOpen(false)}>
                                 <li id="dropdown-item-hb"><Link to="/mostpopular">Most Popular</Link></li>
                                 <li id="dropdown-item-hb"><Link to="/jordan">Jordan</Link></li>
                                 <li id="dropdown-item-hb"><Link to="/nike">Nike</Link></li>
