@@ -64,13 +64,8 @@
 }
 
 @media (max-width: 767px){
-    #navbar-items{
-        padding: 0 5px;
-    }
-
     #hamburger-menu{
         display: flex;
-
     }
 
     #hb-items {
@@ -79,9 +74,9 @@
         align-items: center;
         justify-content: baseline;
         position: fixed;
-        top: 87px;
+        top: 75px;
         width: 100%;
-        height: calc(100vh - 87px);
+        height: calc(100vh - 70px);
         background-color: white;
         z-index: 10;
         overflow-y: auto;
@@ -91,7 +86,7 @@
     #dropdown-list-hb {
         list-style: none;
         font-size: x-large;
-        line-height: 4rem;
+        line-height: 3.7rem;
         text-align: center;
         padding: 0;
     }
