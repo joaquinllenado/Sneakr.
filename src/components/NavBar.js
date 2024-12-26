@@ -19,6 +19,11 @@ function NavBar(){
         navigate(`/search?q=${query}`);
     };
 
+    const handleReturn = () => {
+        setQuery('');
+        setMenuOpen(false);
+    };
+
     return(
         <div className='navbar'>
             <div id='navbar-items'>
@@ -44,7 +49,7 @@ function NavBar(){
                         </div>
                     )}
                 </div>
-                <div id="branding" onClick={() => setQuery('')}>
+                <div id="branding" onClick={handleReturn}>
                     <Link to="/">
                         <h1> Sneakr.</h1>
                     </Link>
