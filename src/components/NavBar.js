@@ -22,6 +22,7 @@ function NavBar(){
     const handleReturn = () => {
         setQuery('');
         setMenuOpen(false);
+        setSearchOpen(false);
     };
 
     return(
