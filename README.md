@@ -7,9 +7,8 @@
 ## Features
 
 - **Real-time Price Aggregation**: Fetches and displays the lowest prices for sneakers from StockX, Goat, and Flight Club.
-- **Responsive Design**: Optimized for both desktop and mobile viewing.
-- **User-Friendly Interface**: Clean and intuitive design for easy navigation.
 - **Brand-Specific Pages**: Dedicated pages for Jordan, Nike, and more, offering a focused browsing experience.
+- **Search Functionality**: Search for deals on your favorite products.
 
 ## Screenshots
 
@@ -22,17 +21,17 @@
 
 ### Jordan Page
 
-![sneakr-jordan](https://github.com/user-attachments/assets/a63a0b7b-6dd4-47a8-9435-4af99ee569b0)
-![sneakr-jordan-mobile](https://github.com/user-attachments/assets/088609d4-57ae-49cf-83de-77255a772c88)
+![sneakr-jordan](https://github.com/user-attachments/assets/ede87540-8941-42f4-b8c7-ca274ff6b597)
+![sneakr-jordan-mobile](https://github.com/user-attachments/assets/7aba29e1-01f7-4261-b110-be37e0aa2140)
 
 **Jordan Page**: A dedicated page for Jordan sneakers, featuring a curated selection of models with real-time price comparisons. Perfect for fans of the iconic brand.
 
-### Nike Page
+### Search Function
 
-![sneakr-nike](https://github.com/user-attachments/assets/7bf2d64d-3282-46a9-91c8-60468bee95f9)
-![sneakr-nike-mobile](https://github.com/user-attachments/assets/27f2b62e-d875-43f6-b9ec-f40e395d58d1)
+![sneakr-yeezy](https://github.com/user-attachments/assets/e00a0962-ea68-43b9-80f9-d3e098c6fbf8)
+![sneakr-yeezy-mobile](https://github.com/user-attachments/assets/5059f214-5104-485d-ba27-35e5f71eed60)
 
-**Nike Page**: Explore the latest Nike sneakers, with an easy-to-navigate layout that showcases the best deals on your favorite models. This page provides focused access to Nike's extensive collection.
+**Search Function**: Search for the best deals on your favorite products. Get results with minimal load times.
 
 ## Installation and Setup
 
