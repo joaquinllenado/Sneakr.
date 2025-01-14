@@ -33,55 +33,6 @@
 
 **Search Function**: Search for the best deals on your favorite products. Get results with minimal load times.
 
-## Installation and Setup
-
-### Prerequisites
-
-- **Node.js**
-- **npm**
-
-### Clone the Repositories
-
-#### Backend
-
-```bash
-git clone https://github.com/joaquinllenado/sneakr-server.git
-cd sneakr-server
-npm install
-```
-
-#### Frontend
-
-```bash
-git clone https://github.com/joaquinllenado/Sneakr.git
-cd Sneakr
-npm install
-```
-
-### Run the Applications
-
-#### Backend Server
-
-Start the backend server first:
-
-```bash
-cd sneakr-server
-npm start
-```
-
-The backend server will be running on `http://localhost:8000`.
-
-#### Frontend Application
-
-After starting the backend, run the frontend:
-
-```bash
-cd Sneakr
-npm start
-```
-
-The frontend application will be available at `http://localhost:3000`.
-
 ## Usage
 
 - Navigate through the homepage to browse popular sneakers.
@@ -92,7 +43,7 @@ The frontend application will be available at `http://localhost:3000`.
 
 Although this is originally a personal project, we welcome contributions to the Sneakr project! If you would like to contribute, please follow these guidelines:
 1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
+2. Create a new branch for your feature or bug fix.
 3. Submit a pull request with a clear description of your changes.
 
 ## Contact
