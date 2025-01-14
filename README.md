@@ -9,24 +9,16 @@
 - **Real-time Price Aggregation**: Fetches and displays the lowest prices for sneakers from StockX, Goat, and Flight Club.
 - **Responsive Design**: Optimized for both desktop and mobile viewing.
 - **User-Friendly Interface**: Clean and intuitive design for easy navigation.
-- **News Section**: Stay updated with the latest sneaker news and trends.
 - **Brand-Specific Pages**: Dedicated pages for Jordan, Nike, and more, offering a focused browsing experience.
 
 ## Screenshots
 
 ### Homepage
 
-![sneakr-homepage](https://github.com/user-attachments/assets/379541bf-0a4f-40e8-a569-91ca789bd415)
-![sneakr-homepage-mobile](https://github.com/user-attachments/assets/e094de66-9e68-4446-9452-384b29f761a2)
+![sneakr-homepage](https://github.com/user-attachments/assets/98d5fa30-d3c6-40f4-bcab-88e015d24c4a)
+![sneakr-screenshot-mobile](https://github.com/user-attachments/assets/68cc0caa-df80-43c5-94e1-5e5311f8d541)
 
 **Homepage**: The landing page where users can browse through a list of popular sneakers. The page displays the latest prices from different marketplaces, allowing users to compare them at a glance.
-
-### News Page
-
-![sneakr-news](https://github.com/user-attachments/assets/82ee7757-fc96-4589-ad82-be01ec6146bb)
-![sneakr-news-mobile](https://github.com/user-attachments/assets/c28a4c8d-92e8-4f56-9962-d778a604ca8a)
-
-**News Page**: Stay informed with the latest sneaker news, trends, and releases. This page aggregates news articles and updates from various sources to keep users in the loop with what's happening in the sneaker world.
 
 ### Jordan Page
 
@@ -94,7 +86,6 @@ The frontend application will be available at `http://localhost:3000`.
 ## Usage
 
 - Navigate through the homepage to browse popular sneakers.
-- Visit the News Page to stay updated on the latest sneaker-related news.
 - Explore the Jordan and Nike pages for brand-specific sneaker collections.
 - Click on a sneaker to view detailed information, including price comparisons across different platforms.
 
