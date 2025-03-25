@@ -1,8 +1,8 @@
 import './App.css';
 import './css/Main.css';
 import { NavBar, Banner, Main, Footer, Dropdown, BackToTopButton } from './components';
-import { MostPopular, Jordan, Nike, NewBalance, Adidas, Puma, Crocs, Converse, Hoka, Search, OnRunningCloud, News, About, Help, Sell } from './pages';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { MostPopular, Jordan, Nike, NewBalance, Adidas, Puma, Crocs, Converse, Hoka, Search, OnRunningCloud } from './pages';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const categories = ['mostpopular', 'jordan', 'nike', 'newbalance', 'adidas', 'puma', 'crocs', 'converse', 'hoka', 'on'];
@@ -14,8 +14,6 @@ const categoryFetchUrls = categories.reduce((acc, category) => {
 function App() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
-  const bannerHiddenPaths = ['/news', '/about', '/help', '/sell'];
 
   async function fetchData() {
     try {
@@ -43,9 +41,6 @@ function App() {
     <div className="App">
       <NavBar/>
       <Dropdown/>
-      {!bannerHiddenPaths.includes(location.pathname) &&
-        <Banner/>
-      }
       <Routes>
         <Route path="/" element={<Main {...data} loading={loading}/>} />
         <Route path="/mostpopular" element={<MostPopular shoes={data.mostpopular} loading={loading}/>} />
@@ -59,10 +54,6 @@ function App() {
         <Route path="/hoka" element={<Hoka shoes={data.hoka} loading={loading}/>} />
         <Route path="/on" element={<OnRunningCloud shoes={data.on} loading={loading}/>} />
         <Route path="/search" element={<Search />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/sell" element={<Sell />} />
       </Routes>
       <BackToTopButton />
       <Footer/>
