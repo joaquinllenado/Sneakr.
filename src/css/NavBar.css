@@ -1,9 +1,13 @@
 .navbar {
-    display: inline-flex;
+    position: sticky;
+    display: flex;
     width: 100%;
     border-bottom: 1px solid lightgray;
     height: 70px;
+    align-items: center;
     justify-content: center;
+    top:0;
+    z-index: 20;
 }
 
 #navbar-items {
@@ -47,6 +51,10 @@
     height: 40px;
     width: 40px;
     cursor: pointer;
+}
+
+#github:hover{
+    filter:brightness(-75%);
 }
 
 .menu {
